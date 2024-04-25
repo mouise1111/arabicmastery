@@ -1,7 +1,8 @@
 <script>
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
-
+	// import Card from '../lib/components/Card.svelte';
+	import Card from '../lib/components/Card.svelte';
 	onMount(() => {
 		gsap.from('.first', { opacity: 0, y: 50, duration: 0.5 });
 		gsap.from('.second', { opacity: 0, y: 50, duration: 0.5, delay: 0.5 });
@@ -23,7 +24,8 @@
 	alt="Gradient"
 	class="absolute hidden w-1/2 lg:block -z-10 right-12 fourth"
 />
-<section class="flex h-screen pt-56 lg:px-32">
+
+<section class="h-screen px-32 py-16 pt-56 lg:px-32">
 	<div class="w-1/2">
 		<h1 class="mb-8 text-6xl font-bold leading-relaxed first">
 			Learn Arabic Easily with Our Interactive Platform.
@@ -105,34 +107,29 @@
 		There are 3 main aspects to learning a language: Grammar, Vocabulary, and Speaking. We provide
 		all of them.
 	</h3>
-	<div class="flex flex-row justify-center gap-32 mt-16">
-		<div>
-			<img src="/standing-learning.png" alt="A man working on his laptop on his standing desk" />
+	<div class="flex flex-col justify-center gap-16 my-24 lg:flex-row lg:text-xl">
+		<div class="transition-transform shadow-xl card w-96 bg-base-100 hover:scale-105">
+			<div class="card-body">
+				<h2 class="card-title">Grammar</h2>
+				<p>Video lectures along with notes.</p>
+				<div class="justify-end card-actions"></div>
+			</div>
 		</div>
-		<div class="flex flex-col justify-center gap-6">
-			<div class="flex flex-row items-center gap-4 text-xl font-medium">
-				<div
-					class="flex items-center justify-center w-12 h-12 border-2 rounded-full border-accent lg:text-xl"
-				>
-					<span>1</span>
-				</div>
-				<div>Learn at your own pace</div>
+		<div class="transition-transform shadow-xl card w-96 bg-base-100 hover:scale-105">
+			<div class="card-body">
+				<h2 class="card-title">Vocabulary</h2>
+				<p>Vocabulary list with Flashcards for pratice.</p>
+				<div class="justify-end card-actions"></div>
 			</div>
-			<div class="flex flex-row items-center gap-4 text-xl font-medium">
-				<div
-					class="flex items-center justify-center w-12 h-12 border-2 rounded-full border-accent lg:text-xl"
-				>
-					<span>2</span>
-				</div>
-				<div>A platform that contains everything to learn Arabic</div>
-			</div>
-			<div class="flex flex-row items-center gap-4 text-xl font-medium">
-				<div
-					class="flex items-center justify-center w-12 h-12 border-2 rounded-full border-accent lg:text-xl"
-				>
-					<span>3</span>
-				</div>
-				<div>Affordable subscription</div>
+		</div>
+		<div class="transition-transform shadow-xl card w-96 bg-base-100 hover:scale-105">
+			<div class="card-body">
+				<h2 class="card-title">Dialogues</h2>
+				<p>
+					Pratice your speaking skills with your <span class="bold text-primary">AI-tutor</span> at your
+					fingertips!
+				</p>
+				<div class="justify-end card-actions"></div>
 			</div>
 		</div>
 	</div>
