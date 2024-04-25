@@ -1,8 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
-	// import Card from '../lib/components/Card.svelte';
-	import Card from '../lib/components/Card.svelte';
+
 	onMount(() => {
 		gsap.from('.first', { opacity: 0, y: 50, duration: 0.5 });
 		gsap.from('.second', { opacity: 0, y: 50, duration: 0.5, delay: 0.5 });
