@@ -7,7 +7,11 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"lint": "prettier --check . && eslint .",
-		"format": "prettier --write ."
+		"format": "prettier --write .",
+		"generate": "drizzle-kit generate:sqlite",
+		"migrate": "drizzle-kit push:sqlite",
+		"studio": "drizzle-kit studio",
+		"drop": "drizzle-kit drop"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^3.0.0",
@@ -16,6 +20,7 @@
 		"@types/eslint": "^8.56.0",
 		"autoprefixer": "^10.4.19",
 		"daisyui": "^4.10.2",
+		"drizzle-kit": "^0.20.17",
 		"eslint": "^8.56.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.35.1",
@@ -28,6 +33,9 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@libsql/client": "^0.6.0",
+		"dotenv": "^16.4.5",
+		"drizzle-orm": "^0.30.9",
 		"gsap": "^3.12.5"
 	}
 }
